@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         ·m½Ò2019
+// @name         æ¶èª²2019
 // @namespace    https://kenshinnn.blogspot.tw
 // @version      0.1
-// @description  ¦Û°Ê¶ñ¸ê®Æ
+// @description  è‡ªå‹•å¡«è³‡æ–™
 // @author       You
 // @match        https://www.beclass.com/rid=234166a5d638c22f164d*
 // @grant        none
@@ -19,31 +19,31 @@
 
 
     var email='xxxx@gmail.com'; // email
-    var phone='0920xxxxxx'; // ¹q¸Ü
-    var classNum; // ¯Z¯Å, ¤µ¦~¤£¦P¯Z¤F
-    var num = 0; // ²Ä´X­Ó½Òµ{ (±q 0 ¶}©l)
-    var name = ''; // ©m¦W
+    var phone='0920xxxxxx'; // é›»è©±
+    var classNum; // ç­ç´š, ä»Šå¹´ä¸åŒç­äº†
+    var num = 0; // ç¬¬å¹¾å€‹èª²ç¨‹ (å¾ 0 é–‹å§‹)
+    var name = ''; // å§“å
 
     switch(z)
     {
-        case 'b1': // ¨k1
-            name='¶Àaa';
-            num=33; // ®à²y(¶g¤T¯Z)
+        case 'b1': // ç”·1
+            name='é»ƒaa';
+            num=33; // æ¡Œçƒ(é€±ä¸‰ç­)
             classNum='40312';
             break;
-        case 'b2': // ¨k2
-            name='¶Àaa';
-            num=30; // Åé¾ŞªÀ (¶g¤­¯Z)
+        case 'b2': // ç”·2
+            name='é»ƒaa';
+            num=30; // é«”æ“ç¤¾ (é€±äº”ç­)
             classNum='40312';
             break;
-        case 'g1': // ¤k1
-            name='¶Àbb';
-            num=33; // ®à²y(¶g¤T¯Z)
+        case 'g1': // å¥³1
+            name='é»ƒbb';
+            num=33; // æ¡Œçƒ(é€±ä¸‰ç­)
             classNum='40325';
             break;
-        case 'g2': // ¤k2
-            name='¶Àbb';
-            num=30; // Åé¾ŞªÀ (¶g¤­¯Z)
+        case 'g2': // å¥³2
+            name='é»ƒbb';
+            num=30; // é«”æ“ç¤¾ (é€±äº”ç­)
             classNum='40325';
             break;
     }
