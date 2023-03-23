@@ -1,0 +1,68 @@
+// ==UserScript==
+// @name         搶課2019
+// @namespace    https://kenshinnn.blogspot.tw
+// @version      0.1
+// @description  自動填資料
+// @author       You
+// @match        https://www.beclass.com/rid=234166a5d638c22f164d*
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    let pars = new URLSearchParams(window.location.search);
+    let z = pars.get('__z');
+
+    if(z == null) return;
+    console.log("z=" + z);
+
+
+    var email='xxxx@gmail.com'; // email
+    var phone='0920xxxxxx'; // 電話
+    var classNum; // 班級, 今年不同班了
+    var num = 0; // 第幾個課程 (從 0 開始)
+    var name = ''; // 姓名
+
+    switch(z)
+    {
+        case 'b1': // 男1
+            name='黃aa';
+            num=33; // 桌球(週三班)
+            classNum='40312';
+            break;
+        case 'b2': // 男2
+            name='黃aa';
+            num=30; // 體操社 (週五班)
+            classNum='40312';
+            break;
+        case 'g1': // 女1
+            name='黃bb';
+            num=33; // 桌球(週三班)
+            classNum='40325';
+            break;
+        case 'g2': // 女2
+            name='黃bb';
+            num=30; // 體操社 (週五班)
+            classNum='40325';
+            break;
+    }
+
+
+    // Your code here...
+
+    var k_func = function() {
+    var dd = document.getElementById('beclassmainframe').contentWindow.document;
+
+    dd.querySelector('input[type="checkbox"]').checked=true;
+    dd.querySelector('#username').value=name;
+    dd.querySelector('#email').value=email;
+    dd.querySelector('#mobile').value=phone;
+    dd.querySelector('#tb_extra_0').value=classNum;
+    dd.querySelectorAll('input[type="radio"]')[num].checked=true;
+    };
+
+    setTimeout(k_func, 500);
+
+
+})();
